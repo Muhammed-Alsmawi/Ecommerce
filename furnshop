@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FurniShop</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .fade {
+      transition: opacity 1s ease-in-out;
+    }
+    .hidden-slide {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .active-slide {
+      opacity: 1;
+      z-index: 10;
+    }
+    img {
+      border-radius: 0 !important;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="absolute top-0 left-0 right-0 z-50 flex items-center justify-between p-6 bg-transparent">
+    <h1 class="text-xl font-bold text-white">FurniShop</h1>
+    <nav class="space-x-6 text-white">
+      <a href="#" class="hover:text-yellow-500">Home</a>
+      <a href="#" class="hover:text-yellow-500">About</a>
+      <a href="#" class="hover:text-yellow-500">Services</a>
+      <a href="#" class="hover:text-yellow-500">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Slider -->
+  <section class="relative h-screen overflow-hidden">
+    <div id="slider" class="absolute inset-0">
+      <div class="fade hidden-slide active-slide bg-cover bg-center h-full w-full flex flex-col justify-center items-center text-white text-center px-4" style="background-image: url('https://img.freepik.com/free-photo/armchair-green-living-room-with-copy-space_43614-910.jpg?semt=ais_hybrid&w=740');">
+        <h2 class="text-4xl md:text-5xl font-bold">Creative Home Simplify Your Furniture</h2>
+        <p class="mt-4 max-w-xl">Do it home comfort to match the revolving classic needs, rest and breath moves, and great glam with home setup.</p>
+        <button class="mt-6 bg-transparent border border-white text-white hover:bg-white hover:text-green-700 px-6 py-3 rounded-lg font-semibold transition-all">Shop Now</button>
+      </div>
+      <div class="fade hidden-slide bg-cover bg-center h-full w-full flex flex-col justify-center items-center text-white text-center px-4" style="background-image: url('https://img.freepik.com/premium-photo/black-wall-with-wooden-panel-room-with-armchair-plant-pot-wooden-floor-3d-rendering_180507-1381.jpg?semt=ais_hybrid&w=740');">
+        <h2 class="text-4xl md:text-5xl font-bold">Design Your Living Room with Style</h2>
+        <p class="mt-4 max-w-xl">Make your living space elegant and cozy with modern furniture selections.</p>
+        <button class="mt-6 bg-transparent border border-white text-white hover:bg-white hover:text-green-700 px-6 py-3 rounded-lg font-semibold transition-all">Shop Now</button>
+      </div>
+      <div class="fade hidden-slide bg-cover bg-center h-full w-full flex flex-col justify-center items-center text-white text-center px-4" style="background-image: url('https://img.freepik.com/free-photo/blue-armchair-against-blue-wall-living-room-interior-elegant-interior-design-with-copy-space-ai-generative_123827-23715.jpg?semt=ais_hybrid&w=740');">
+        <h2 class="text-4xl md:text-5xl font-bold">Comfort Meets Elegance</h2>
+        <p class="mt-4 max-w-xl">Discover our collection where functionality blends beautifully with aesthetics.</p>
+        <button class="mt-6 bg-transparent border border-white text-white hover:bg-white hover:text-green-700 px-6 py-3 rounded-lg font-semibold transition-all">Shop Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="relative z-10 -mt-12 px-6 md:px-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-green-700 text-white py-8 px-6 rounded-xl shadow-lg divide-x divide-white/30">
+      <div class="text-center px-2">
+        <h3 class="text-3xl font-bold">7</h3>
+        <p class="text-sm text-white/80 mt-1">Year Experience</p>
+      </div>
+      <div class="text-center px-2">
+        <h3 class="text-3xl font-bold">2</h3>
+        <p class="text-sm text-white/80 mt-1">Opened in the country</p>
+      </div>
+      <div class="text-center px-2">
+        <h3 class="text-3xl font-bold">10k+</h3>
+        <p class="text-sm text-white/80 mt-1">Furniture sold</p>
+      </div>
+      <div class="text-center px-2">
+        <h3 class="text-3xl font-bold">260+</h3>
+        <p class="text-sm text-white/80 mt-1">Variety Furniture</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <img src="https://production-ecom.hestyadesign.com/media/wysiwyg/1c.jpg" alt="About" class="shadow-lg">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">We Create Your Home More Aesthetic</h2>
+      <p class="mb-4 text-gray-700">FurniShop provides a sophisticated service for independent business management:</p>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Variation Services</li>
+        <li>Independent Services</li>
+        <li>Development of Furniture Modules</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- New in Store Now -->
+  <section class="px-6 md:px-20 pb-16">
+    <div class="grid md:grid-cols-5 gap-6 items-start">
+      <div class="md:col-span-1">
+        <h3 class="text-xl font-bold mb-2">New In Store Now</h3>
+        <p class="text-gray-500 text-sm mb-4">Get the latest items immediately with promo prices.</p>
+        <a href="#" class="text-black hover:underline font-medium inline-flex items-center gap-1">Check All →</a>
+      </div>
+      <div class="md:col-span-4 flex gap-6 overflow-x-auto pb-4">
+        <div class="min-w-[250px] bg-gray-100 hover:shadow-lg transition-all">
+          <img src="https://production-ecom.hestyadesign.com/media/wysiwyg/1c.jpg" alt="Chair" class="w-full h-64 object-cover">
+          <div class="p-4 text-center font-semibold">Chair</div>
+        </div>
+        <div class="min-w-[250px] bg-gray-100 hover:shadow-lg transition-all">
+          <img src="https://production-ecom.hestyadesign.com/media/wysiwyg/1c.jpg" alt="Bed" class="w-full h-64 object-cover">
+          <div class="p-4 text-center font-semibold">Bed</div>
+        </div>
+        <div class="min-w-[250px] bg-gray-100 hover:shadow-lg transition-all">
+          <img src="https://production-ecom.hestyadesign.com/media/wysiwyg/1c.jpg" alt="Cupboard" class="w-full h-64 object-cover">
+          <div class="p-4 text-center font-semibold">Cupboard</div>
+        </div>
+        <div class="min-w-[250px] bg-gray-100 hover:shadow-lg transition-all relative" style="margin-right: -125px;">
+          <img src="https://production-ecom.hestyadesign.com/media/wysiwyg/1c.jpg" alt="Lighting" class="w-full h-64 object-cover">
+          <div class="p-4 text-center font-semibold">Lighting</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlight Section (New) -->
+  <section class="px-6 md:px-20 pb-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">The Best Furniture Manufacturer Of Your Choice</h2>
+        <p class="text-gray-700 mb-4">FurniShop is a trusted name for multipurpose business management systems, especially for those who are running modern business needs. Experience the future Furniture power in a software-as-a-service.</p>
+      </div>
+      <img src="https://s3.envato.com/files/348957833/24-06-21-2.jpg" alt="Furniture Showcase" class="rounded-lg shadow-md w-full">
+    </div>
+  </section>
+
+  <!-- All Product Section (New) -->
+  <section class="px-6 md:px-20 pb-20">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold mb-2">All Product</h2>
+      <p class="text-gray-500">The products are available only at our store and now are selected from the latest collection. Scroll to explore more.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition-all">
+        <img src="https://furniture123.co.uk/Images/BUNKOR00195433_3_Supersize.jpg?v=79" alt="Ceiling Light" class="w-full h-48 object-cover mb-4">
+        <h4 class="font-semibold mb-2">Ceiling Light</h4>
+        <p class="text-gray-600">$250.00</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition-all">
+        <img src="https://furniture123.co.uk/Images/BUNKOR00195433_3_Supersize.jpg?v=79" alt="Wood Chair" class="w-full h-48 object-cover mb-4">
+        <h4 class="font-semibold mb-2">Wood Chair</h4>
+        <p class="text-gray-600">$120.00</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition-all">
+        <img src="https://furniture123.co.uk/Images/BUNKOR00195433_3_Supersize.jpg?v=79" alt="Paper Cupboard" class="w-full h-48 object-cover mb-4">
+        <h4 class="font-semibold mb-2">Paper Cupboard</h4>
+        <p class="text-gray-600">$450.00</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition-all">
+        <img src="https://furniture123.co.uk/Images/BUNKOR00195433_3_Supersize.jpg?v=79" alt="Ole Gundorse Spring Bed" class="w-full h-48 object-cover mb-4">
+        <h4 class="font-semibold mb-2">Ole Gundorse Spring Bed</h4>
+        <p class="text-gray-600">$999.00</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition-all">
+        <img src="https://furniture123.co.uk/Images/BUNKOR00195433_3_Supersize.jpg?v=79" alt="Trees Seross 911" class="w-full h-48 object-cover mb-4">
+        <h4 class="font-semibold mb-2">Trees Seross 911</h4>
+        <p class="text-gray-600">$200.00</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition-all">
+        <img src="https://furniture123.co.uk/Images/BUNKOR00195433_3_Supersize.jpg?v=79" alt="Multi Bilderman Slubber" class="w-full h-48 object-cover mb-4">
+        <h4 class="font-semibold mb-2">Multi Bilderman Slubber</h4>
+        <p class="text-gray-600">$350.00</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition-all">
+        <img src="https://furniture123.co.uk/Images/BUNKOR00195433_3_Supersize.jpg?v=79" alt="XDRA Corner Desk" class="w-full h-48 object-cover mb-4">
+        <h4 class="font-semibold mb-2">XDRA Corner Desk</h4>
+        <p class="text-gray-600">$470.00</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transition-all">
+        <img src="https://furniture123.co.uk/Images/BUNKOR00195433_3_Supersize.jpg?v=79" alt="Black Forsri Series Wood" class="w-full h-48 object-cover mb-4">
+        <h4 class="font-semibold mb-2">Black Forsri Series Wood</h4>
+        <p class="text-gray-600">$320.00</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Testimonial Section -->
+  <section class="px-6 md:px-20 pb-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">What People Are Saying About Us</h2>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex items-center gap-4">
+            <img src="https://img.freepik.com/free-psd/blank-wall-psd-japandi-living-room-interior_53876-109284.jpg?semt=ais_hybrid&w=740" alt="Josh Smith" class="w-12 h-12 rounded-full">
+            <div>
+              <h4 class="font-semibold">Josh Smith</h4>
+              <p class="text-sm text-gray-500">Manager of Furniture Park Town</p>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-700">"They are have a perfect touch for make something so professional, awesome and useful for a lot of people."</p>
+        </div>
+      </div>
+      <img src="https://img.freepik.com/free-psd/blank-wall-psd-japandi-living-room-interior_53876-109284.jpg?semt=ais_hybrid&w=740" alt="Testimonial Image" class="rounded-lg shadow-md w-full">
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="relative bg-gradient-to-br from-green-900 to-green-700 text-white px-6 md:px-20 py-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <img src="https://www.startup-adresse-hannover.de/img/lamp.png" alt="Lamp" class="w-full max-w-sm mx-auto">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Get more discount<br />Off your order</h2>
+        <p class="mb-6 text-white/80">Join our mailing list</p>
+        <form class="flex flex-col sm:flex-row gap-4">
+          <input type="email" placeholder="Your email address" class="px-4 py-3 rounded-md text-gray-800 focus:outline-none w-full sm:w-auto">
+          <button type="submit" class="bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800">Shop Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+  <footer class="bg-gray-900 text-white px-6 md:px-20 pt-8 pb-12">
+    <!-- Top: Social & Brand -->
+    <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+      <h3 class="text-xl font-semibold">FurniShop</h3>
+      <div class="flex space-x-4 text-lg mt-4 md:mt-0">
+        <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/20 mb-8"></div>
+
+    <!-- Footer Links -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-sm text-white/80">
+      <div>
+        <h4 class="font-semibold mb-3 text-white">Our Products</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">The Support Suite</a></li>
+          <li><a href="#" class="hover:underline">The Sales Suite</a></li>
+          <li><a href="#" class="hover:underline">Support</a></li>
+          <li><a href="#" class="hover:underline">Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-white">Top Features</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Ticketing System</a></li>
+          <li><a href="#" class="hover:underline">Knowledge Base</a></li>
+          <li><a href="#" class="hover:underline">Community Forums</a></li>
+          <li><a href="#" class="hover:underline">Help Desk Software</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-white">Resources</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Product Support</a></li>
+          <li><a href="#" class="hover:underline">Request Demo</a></li>
+          <li><a href="#" class="hover:underline">Library</a></li>
+          <li><a href="#" class="hover:underline">Professional Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-white">Company</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">About Us</a></li>
+          <li><a href="#" class="hover:underline">Press</a></li>
+          <li><a href="#" class="hover:underline">Investors</a></li>
+          <li><a href="#" class="hover:underline">Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3 text-white">Favorite Things</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">New Arrivals</a></li>
+          <li><a href="#" class="hover:underline">Top Rated</a></li>
+          <li><a href="#" class="hover:underline">Hot Discounts</a></li>
+          <li><a href="#" class="hover:underline">Top Seller Bundles</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="mt-10 text-center text-xs text-white/50">© FurniShop 2025 - All Rights Reserved</p>
+  </footer>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const slides = document.querySelectorAll(".fade");
+      if (slides.length === 0) return;
+      let index = 0;
+      setInterval(() => {
+        slides[index].classList.remove("active-slide");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active-slide");
+      }, 4000);
+    });
+  </script>
+  <script>
+    const slides = document.querySelectorAll(".fade");
+    let index = 0;
+    setInterval(() => {
+      slides[index].classList.remove("active-slide");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active-slide");
+    }, 4000);
+  </script>
+</body>
+</html>
